@@ -8,47 +8,96 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #121212;
+            color: white;
             margin: 0;
-            padding: 20px;
-            text-align: center;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
         .container {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
             max-width: 500px;
-            margin: 0 auto;
+            width: 100%;
+            padding: 20px;
+        }
+        .balance {
+            font-size: 2em;
+            margin: 20px 0;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
         }
         .button {
-            display: block;
-            background-color: #4CAF50;
+            display: inline-block;
+            background-color: #ff4081;
             color: white;
             padding: 10px 20px;
-            margin: 10px 0;
-            border: none;
+            margin: 10px;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+            transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #45a049;
+            background-color: #ff79b0;
         }
-        #output {
+        .section {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 15px;
+        }
+        .section h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .section p {
+            margin: 5px 0 0;
+        }
+        .footer {
             margin-top: 20px;
+            font-size: 0.8em;
+            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Boombot</h1>
-        <p>Choose an action below:</p>
-        <a class="button" onclick="sendCommand('stats')">📊 Get Statistics</a>
-        <a class="button" onclick="sendCommand('integration')">⚙️ Integration</a>
-        <a class="button" onclick="sendCommand('finance')">💰 Finance</a>
-        <a class="button" onclick="sendCommand('brands')">🎰 Brands Info</a>
-        <div id="output"></div>
+        <h1>Кошелёк</h1>
+        <div class="balance">
+            Баланс <br> 0,00 $
+        </div>
+        <div class="button-container">
+            <a class="button" onclick="sendCommand('send')">Отправить</a>
+            <a class="button" onclick="sendCommand('topup')">Пополнить</a>
+            <a class="button" onclick="sendCommand('exchange')">Обменять</a>
+            <a class="button" onclick="sendCommand('p2p')">P2P Маркет</a>
+        </div>
+        <div class="section">
+            <h3>Бонусы в Кошельке</h3>
+            <p>2 832,39 $</p>
+        </div>
+        <div class="section">
+            <h3>TON Space Бета</h3>
+            <p>Создать TON Space ></p>
+        </div>
+        <div class="section">
+            <h3>Доллары</h3>
+            <p>0 USDT</p>
+        </div>
+        <div class="section">
+            <h3>Другие активы</h3>
+            <p>0,00 $</p>
+        </div>
+        <div class="footer">
+            <p>Telegram Mini App</p>
+        </div>
     </div>
 
     <script>
