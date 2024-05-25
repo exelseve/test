@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boomerang Partners | Boombot </title>
+    <title>Boomerang Partners | Boombot</title>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         body {
@@ -30,19 +30,25 @@
         }
         .button-container {
             display: flex;
-            justify-content: space-around;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-top: 20px;
         }
         .button {
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             background-color: #ff4081;
             color: white;
-            padding: 10px 20px;
+            padding: 15px 25px;
             margin: 10px;
             border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
             transition: background-color 0.3s ease;
+            font-size: 1em;
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
         }
         .button:hover {
             background-color: #ff79b0;
@@ -71,17 +77,17 @@
     <div class="container">
         <h1>We're Boombot</h1>
         <div class="balance">
-            We rebelled  <br> 0100 
+            We rebelled <br> 0100
         </div>
         <div class="button-container">
-            <a class="button" onclick="sendCommand('send')">Stats all</a>
-            <a class="button" onclick="sendCommand('topup')">Integration</a>
-            <a class="button" onclick="sendCommand('exchange')">Finance</a>
-            <a class="button" onclick="sendCommand('p2p')">Brands info</a>
+            <a class="button" onclick="sendCommand('stats')">📊 Stats all</a>
+            <a class="button" onclick="sendCommand('integration')">⚙️ Integration</a>
+            <a class="button" onclick="sendCommand('finance')">💰 Finance</a>
+            <a class="button" onclick="sendCommand('brands')">🎰 Brands info</a>
         </div>
         <div class="section">
             <h3>Мои отчеты</h3>
-            <p> ftd</p>
+            <p>ftd</p>
         </div>
         <div class="section">
             <h3>Раздел в разработке</h3>
@@ -96,7 +102,7 @@
             <p>RU</p>
         </div>
         <div class="footer">
-            <p>Boomerang Partners | Boombot </p>
+            <p>Boomerang Partners | Boombot | 2024</p>
         </div>
     </div>
 
