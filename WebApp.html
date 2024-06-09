@@ -17,23 +17,25 @@
             align-items: center;
             height: 100vh;
             overflow: hidden;
+            box-sizing: border-box;
         }
         .container {
             text-align: center;
             max-width: 600px;
-            width: 90%;
+            width: 100%;
             padding: 20px;
             box-sizing: border-box;
+            overflow-y: auto;
         }
         .balance {
-            font-size: 2em;
+            font-size: 1.5em;
             margin: 20px 0;
         }
         .button-container {
             display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
+            justify-content: center;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
         .button {
             display: flex;
@@ -41,16 +43,14 @@
             justify-content: center;
             background-color: #ff4081;
             color: white;
-            padding: 10px 25px;
+            padding: 10px 20px;
             margin: 10px;
             border-radius: 20px;
             cursor: pointer;
             text-decoration: none;
             transition: background-color 0.3s ease, transform 0.3s ease;
             font-size: 1em;
-            flex: 1;
-            min-width: 120px;
-            max-width: 150px;
+            flex: 1 1 45%;
             box-sizing: border-box;
         }
         .button:hover {
@@ -78,11 +78,11 @@
         }
         @media (max-width: 600px) {
             .balance {
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
             .button {
                 font-size: 0.9em;
-                padding: 8px 20px;
+                padding: 8px 16px;
             }
         }
     </style>
